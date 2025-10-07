@@ -127,7 +127,7 @@ export default function VimarBeleza() {
                   ['servicos','Serviços'],
                   ['galeria','Galeria'],
                   ['sobre','Sobre Nós'],
-                  ['contato','Contato'],
+                  ['contato','Contacto'],
                 ].map(([id,label]) => (
                   <button
                     key={id}
@@ -143,28 +143,27 @@ export default function VimarBeleza() {
           )}
         </div>
       </header>
-
       {/* Hero */}
       <section id="inicio" className="pt-16 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="font-heading text-4xl md:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 A sua Beleza
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-700">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-700 -mt-3">
                   começa Aqui
                 </span>
               </h1>
               <p className="text-xl text-muted mb-8 leading-relaxed">
-                No Vimar Beleza e Bem-Estar, transformamos sua beleza natural em arte. 
-                Experimente nossos serviços profissionais em um ambiente acolhedor e relaxante.
+                No nosso salão, transformamos a sua beleza natural em arte. 
+                Experimente os nossos serviços profissionais num ambiente acolhedor e relaxante.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button type="button" className="bg-gradient-to-r from-accent to-accent-700 text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <Calendar className="h-5 w-5" />
-                  <span>Agendar Consulta</span>
+                  <Phone className="h-5 w-5" />
+                  <span>Marcação</span>
                 </button>
-                <button 
+                <button                                   
                   type="button"
                   onClick={() => scrollToSection('servicos')}
                   className="border-2 border-accent text-accent px-8 py-4 rounded-full font-semibold hover:bg-accent hover:text-white transition-all duration-300"
@@ -193,7 +192,7 @@ export default function VimarBeleza() {
                   <Star className="h-5 w-5 text-accent fill-current" />
                   <Star className="h-5 w-5 text-accent fill-current" />
                 </div>
-                <p className="text-sm text-muted mt-1">Clientes Satisfeitas</p>
+                <p className="text-sm text-muted mt-1">+300 Clientes</p>
               </div>
             </div>
           </div>
@@ -342,7 +341,7 @@ export default function VimarBeleza() {
                     <div className="bg-accent p-3 rounded-full"><MapPin className="h-6 w-6 text-white" /></div>
                     <div>
                       <h4 className="font-semibold text-foreground">Localização</h4>
-                      <p className="text-muted">Vimar Beleza e Bem-Estar</p>
+                      <p className="text-muted">Largo da Senhora Branca, nº100</p>
                     </div>
                   </div>
                 </div>
@@ -422,7 +421,8 @@ export default function VimarBeleza() {
               <h4 className="text-lg font-semibold mb-4">Contacto</h4>
               <div className="space-y-2 text-white/70">
                 <p>Segunda a Sábado: 10:00 - 19:00</p>
-                <p>+351 XXX XXX XXX</p>
+                <p>253 261 617 </p>
+                <p>936 315  846</p>
                 <div className="flex space-x-4 mt-4">
                   <a href="#" aria-label="Facebook" className="hover:text-accent transition-colors">Facebook</a>
                   <a href="#" aria-label="Instagram" className="hover:text-accent transition-colors">Instagram</a>
