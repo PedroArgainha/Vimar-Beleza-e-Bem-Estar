@@ -127,7 +127,7 @@ export default function VimarBeleza() {
                   ['servicos','Serviços'],
                   ['galeria','Galeria'],
                   ['sobre','Sobre Nós'],
-                  ['contato','Contacto'],
+                  ['contato','Contato'],
                 ].map(([id,label]) => (
                   <button
                     key={id}
