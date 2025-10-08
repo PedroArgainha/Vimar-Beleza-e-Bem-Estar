@@ -5,11 +5,11 @@
   --background: #F6F4F1;   /* fundo suave/bege */
   --foreground: #2E3645;   /* “ink” escuro */
   --muted: #62707F;        /* texto secundário */
-
-  --accent: #FFA276;       /* pêssego principal */
-  --accent-600: #FF8C4C;
-  --accent-700: #F2702C;
-  --accent-100: #FFE7D9;
+  
+  --accent: #bf3252;       /* Bordô principal */
+  --accent-100: #f7d9e0;   /* Rosa claro suave (background ou hover leve) */
+  --accent-600: #a12b47;   /* Bordô médio escuro (hover, active) */
+  --accent-700: #821f3a;   /* Bordô profundo (foco, borda intensa) */
 
   --card: #FFFFFF;
   --border: #E8E5E0;
