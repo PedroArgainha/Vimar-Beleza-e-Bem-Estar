@@ -254,11 +254,11 @@ export default function VimarBeleza() {
       </section>
 
       {/* Galeria */}
-      <section id="galeria" className="py-20 bg-background">
+      <section id="galeria" className="py-20 bg-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl font-bold text-foreground mb-4">Galeria</h2>
-            <p className="text-xl text-muted">Veja alguns dos nossos trabalhos e o ambiente do nosso salão</p>
+            <h2 className="font-heading text-4xl font-bold text-background mb-4">Galeria</h2>
+            <p className="text-xl text-background">Veja alguns dos nossos trabalhos e o ambiente do nosso salão</p>
           </div>
 
           <div className="space-y-8">
@@ -273,7 +273,7 @@ export default function VimarBeleza() {
             </div>
 
             <div className="overflow-hidden">
-              <div className="flex overflow-x-auto scrollbar-hide space-x-6 pb-4 ml-36">
+              <div className="flex overflow-x-auto scrollbar-hide space-x-6 pb-4 ">
                 {galleryImagesBottom.map((image, index) => (
                   <div key={index} className="flex-shrink-0">
                     <img src={image} alt={`Galeria ${index + 9}`} className="w-72 h-48 object-cover rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300" />
@@ -290,7 +290,7 @@ export default function VimarBeleza() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500&h=600&fit=crop" alt="Proprietária do Vimar Beleza e Bem-Estar" className="w-full h-96 object-cover rounded-2xl shadow-2xl" />
+              <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500&h=600&fit=crop" alt="Foto da Gininha" className="w-full h-96 object-cover rounded-2xl shadow-2xl" />
               <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-xl border border-border">
                 <p className="text-2xl font-bold text-accent">15+</p>
                 <p className="text-sm text-muted">Anos de Experiência</p>
@@ -298,12 +298,12 @@ export default function VimarBeleza() {
             </div>
             <div>
               <h2 className="font-heading text-4xl font-bold text-foreground mb-6">Sobre Nós</h2>
-              <p className="text-lg text-muted leading-relaxed mb-6">Bem-vindas ao Vimar Beleza e Bem-Estar! …</p>
-              <p className="text-lg text-muted leading-relaxed mb-6">O nosso salão nasceu do sonho …</p>
-              <p className="text-lg text-muted leading-relaxed mb-8">A nossa missão é realçar a beleza …</p>
+              <p className="text-lg text-muted leading-relaxed mb-6">Há mais de 15 anos, vivo a minha paixão por cuidar de pessoas e valorizar a sua beleza natural.</p>
+              <p className="text-lg text-muted leading-relaxed mb-6">O nosso salão é o reflexo desse amor e um espaço criado para si, onde a beleza se encontra com o carinho, e o cuidado se transforma em amor-próprio.</p>
+              <p className="text-lg text-muted leading-relaxed mb-8">Comprometemo-nos a oferecer-lhe um espaço onde possa sentir-se especial, por dentro e por fora.</p>
               <div className="flex items-center space-x-4">
                 <Heart className="h-8 w-8 text-accent" />
-                <span className="text-lg font-semibold text-foreground">Com amor, Vimar</span>
+                <span className="text-lg font-semibold text-foreground">Com amor, Gininha</span>
               </div>
             </div>
           </div>
