@@ -12,11 +12,10 @@ export default function VimarBeleza() {
     { name: "Coloração e Madeixas",
       description: "Transforme o seu visual com asnossas técnicas avançadas de coloração e madeixas. Utilizamos produtos de alta qualidade para garantir cores vibrantes e duradouras.",
       images: [
-        "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&h=300&fit=crop"
-      ]},
+        "/fotos/madeixas/madeixas1.jpg",
+        "/fotos/madeixas/madeixas.jpg",
+        "/fotos/madeixas/madeixas2.jpg"
+        ]},
     { name: "Desfrizagem",
       description: "Elimine o frizz e tenha cabelos lisos e sedosos por mais tempo. Os nossos tratamentos de desfrizagem respeitam a estrutura natural dos fios.",
       images: [
@@ -26,29 +25,26 @@ export default function VimarBeleza() {
         "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=300&fit=crop"
       ]},
     { name: "Manicure e Pedicure",
-      description: "Cuide das suas unhas com nossos serviços completos de manicure e pedicure. Técnicas profissionais para unhas sempre impecáveis.",
+      description: "Cuide das suas unhas com nossos s erviços completos de manicure e pedicure. Técnicas profissionais para unhas sempre impecáveis.",
       images: [
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=400&h=300&fit=crop"
+        "/fotos/unhas/unhas2.jpg",
+        "/fotos/unhas/unhas4.jpg",
+        "/fotos/unhas/unhas3.jpg",
+        "/fotos/unhas/unhas1.jpg"
       ]},
     { name: "Hidratação e Botox Capilar",
       description: "Revitalize o seu cabelo com o tratamento de hidratação profunda e botox capilar. Fios mais saudáveis, brilhantes e resistentes.",
       images: [
-        "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+        "/fotos/hidratacao/hidratacao1.jpg",
+        "/fotos/hidratacao/hidratacao2.jpg",
       ]},
-    { name: "Sobrançelha e Buço",
-      description: "Design perfeito para as suas sobrançelhas e remoção profissional de pelos. Realce sua beleza natural com nossos cuidados especializados.",
+    { name: "Penteados",
+      description: "Do liso perfeito às ondas naturais, do apanhado elegante ao look descontraído: criamos penteados que a fazem sentir ",
       images: [
-        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=300&fit=crop",
-        "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop"
-      ]},
+        "/fotos/penteados/penteados3.jpg",
+        "/fotos/penteados/penteado2.jpg",
+        "/fotos/penteados/penteado1.jpg",
+      ]}, 
   ]
 
   const heroImages = [
@@ -204,7 +200,7 @@ export default function VimarBeleza() {
       <section id="servicos" className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl font-bold text-foreground mb-4">Os  Serviços</h2>
+            <h2 className="font-heading text-4xl font-bold text-foreground mb-4">Os Nossos Serviços</h2>
             <p className="text-xl text-muted max-w-3xl mx-auto">
               Oferecemos uma gama completa de serviços de beleza com técnicas modernas e produtos de alta qualidade
             </p>
@@ -275,7 +271,7 @@ export default function VimarBeleza() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=500&h=600&fit=crop" alt="Proprietária" className="w-full h-96 object-cover rounded-2xl shadow-2xl" />
+              <img src="/fotos/gina.jpg" alt="Proprietária" className="w-full h-96 object-cover rounded-2xl shadow-2xl" />
               <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-xl border border-border">
                 <p className="text-2xl font-bold text-accent">15+</p>
                 <p className="text-sm text-muted">Anos de Experiência</p>
