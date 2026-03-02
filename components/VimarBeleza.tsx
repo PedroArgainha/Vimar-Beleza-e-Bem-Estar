@@ -207,7 +207,7 @@ export default function VimarBeleza() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-4">
-              {services.map((service, index) => (
+              {services.map((service, index) => (         
                 <button
                   key={index}
                   type="button"
@@ -235,9 +235,8 @@ export default function VimarBeleza() {
                 </button>
               ))}
             </div>
-
-            <div className="lg:sticky lg:top-24">
-              <div className="bg-background rounded-2xl p-8 shadow-xl border border-border">
+              <div id="servico-detalhes" className="lg:sticky lg:top-24 scroll-mt-24">
+                <div className="bg-background rounded-2xl p-8 shadow-xl border border-border">
                 <div className="mb-6">
                   <div className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4">
                     {services[selectedService].images.map((image, index) => (
