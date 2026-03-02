@@ -25,7 +25,7 @@ export default function VimarBeleza() {
         "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=300&fit=crop"
       ]},
     { name: "Manicure e Pedicure",
-      description: "Cuide das suas unhas com nossos s erviços completos de manicure e pedicure. Técnicas profissionais para unhas sempre impecáveis.",
+      description: "Cuide das suas unhas com nossos serviços completos de manicure e pedicure. Técnicas profissionais para unhas sempre impecáveis.",
       images: [
         "/fotos/unhas/unhas2.jpg",
         "/fotos/unhas/unhas4.jpg",
@@ -49,7 +49,7 @@ export default function VimarBeleza() {
 
   const heroImages = [
     "/fotos/heroimages/vimarfrente.jpg",
-    "/fotos/heroimages/vimarlado.jpg",
+    "/fotos/heroimages/parede.jpg",
     "/fotos/heroimages/cadeiras.jpg",
     "/fotos/heroimages/sala.jpg"
   ]
@@ -211,7 +211,17 @@ export default function VimarBeleza() {
                 <button
                   key={index}
                   type="button"
-                  onClick={() => setSelectedService(index)}
+                  onClick={() => {
+                    setSelectedService(index)
+                    // Em mobile/tablet (abaixo do "lg"), desce até ao painel com as fotos
+                    if (typeof window !== "undefined" && window.matchMedia("(max-width: 1023px)").matches) {
+                      requestAnimationFrame(() => {
+                        document
+                          .getElementById("servico-detalhes")
+                          ?.scrollIntoView({ behavior: "smooth", block: "start" })
+                      })
+                    }
+                  }}
                   className={`w-full text-left p-6 rounded-2xl transition-all duration-300 ${
                     selectedService === index
                       ? 'bg-gradient-to-r from-accent to-accent-700 text-white shadow-2xl transform scale-105'
