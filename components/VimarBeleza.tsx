@@ -48,23 +48,22 @@ export default function VimarBeleza() {
   ]
 
   const heroImages = [
-    "/fotos/heroimages/vimarfrente.jpg",
-    "/fotos/heroimages/cima1.jpg",
-    "/fotos/heroimages/cadeiras.jpg",
-    "/fotos/heroimages/sala.jpg"
+    "/fotos/heroimages/vimarfrente.JPG",
+    "/fotos/heroimages/vimarlado.JPG",
+    "/fotos/heroimages/cadeiras.JPG",
+    "/fotos/heroimages/sala.JPG"
   ]
 
   const galleryImagesTop = [
-    { src: "/fotos/cima/vimarlado.jpg", alt: "Serviço de Beleza 1" },
-    { src: "/fotos/cima/cima2.jpg", alt: "Serviço de Beleza 2" },
-    { src: "/fotos/cima/cima3.jpg", alt: "Serviço de Beleza 3" },
-    { src: "/fotos/cima/cima4.jpg", alt: "Serviço de Beleza 4" },
-
+    { src: "/fotos/cima/vimarlado.JPG", alt: "Serviço de Beleza 1" },
+    { src: "/fotos/cima/cima2.JPG", alt: "Serviço de Beleza 2" },
+    { src: "/fotos/cima/cima3.JPG", alt: "Serviço de Beleza 3" },
+    { src: "/fotos/cima/cima4.JPG", alt: "Serviço de Beleza 4" }
   ]
   const galleryImagesBottom = [
-    { src: "/fotos/baixo/baixo1.jpg", alt: "Galeria Vimar 1" },
-    { src: "/fotos/baixo/baixo2.jpg", alt: "Galeria Vimar 2" },
-    { src: "/fotos/baixo/baixo3.jpg", alt: "Galeria Vimar 3" },
+    { src: "/fotos/baixo/baixo1.JPG", alt: "Galeria Vimar 1" },
+    { src: "/fotos/baixo/baixo2.JPG", alt: "Galeria Vimar 2" },
+    { src: "/fotos/baixo/baixo3.JPG", alt: "Galeria Vimar 3" },
     { src: "/fotos/baixo/gininha1.jpg", alt: "Galeria Vimar 4" }
   ]
 
