@@ -35,7 +35,7 @@ export default function VimarBeleza() {
     { name: "Hidratação e Botox Capilar",
       description: "Revitalize o seu cabelo com o tratamento de hidratação profunda e botox capilar. Fios mais saudáveis, brilhantes e resistentes.",
       images: [
-        "/fotos/hidratacao/hidratacao1.jpg",
+        "/fotos/hidratacao/hidratacao.jpg",
         "/fotos/hidratacao/hidratacao2.jpg",
       ]},
     { name: "Penteados",
@@ -48,24 +48,23 @@ export default function VimarBeleza() {
   ]
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop"
+    "/fotos/heroimages/vimarfrente.jpg",
+    "/fotos/heroimages/vimarlado.jpg",
+    "/fotos/heroimages/cadeiras.jpg",
+    "/fotos/heroimages/sala.jpg"
   ]
 
   const galleryImagesTop = [
-    { src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=300&fit=crop", alt: "Serviço de Beleza 1" },
-    { src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop", alt: "Serviço de Beleza 2" },
-    { src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=300&fit=crop", alt: "Serviço de Beleza 3" },
-    { src: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop", alt: "Serviço de Beleza 4" }
+    { src: "/fotos/cima/cima1.jpg", alt: "Serviço de Beleza 1" },
+    { src: "/fotos/cima/cima2.jpg", alt: "Serviço de Beleza 2" },
+    { src: "/fotos/cima/cima3.jpg", alt: "Serviço de Beleza 3" },
+    { src: "/fotos/cima/cima4.jpg", alt: "Serviço de Beleza 4" }
   ]
   const galleryImagesBottom = [
-    { src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=300&fit=crop", alt: "Galeria Vimar 1" },
-    { src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop", alt: "Galeria Vimar 2" },
-    { src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=300&fit=crop", alt: "Galeria Vimar 3" },
-    { src: "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop", alt: "Galeria Vimar 4" }
+    { src: "/fotos/baixo/baixo1.jpg", alt: "Galeria Vimar 1" },
+    { src: "/fotos/baixo/baixo2.jpg", alt: "Galeria Vimar 2" },
+    { src: "/fotos/baixo/baixo3.jpg", alt: "Galeria Vimar 3" },
+    { src: "/fotos/baixo/gininha1.jpg", alt: "Galeria Vimar 4" }
   ]
 
   const scrollToSection = (sectionId: string) => {
