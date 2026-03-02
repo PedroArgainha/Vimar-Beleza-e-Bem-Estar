@@ -49,16 +49,17 @@ export default function VimarBeleza() {
 
   const heroImages = [
     "/fotos/heroimages/vimarfrente.jpg",
-    "/fotos/heroimages/vimarlado.jpg",
+    "/fotos/heroimages/cima1.jpg",
     "/fotos/heroimages/cadeiras.jpg",
     "/fotos/heroimages/sala.jpg"
   ]
 
   const galleryImagesTop = [
-    { src: "/fotos/cima/cima1.jpg", alt: "Serviço de Beleza 1" },
+    { src: "/fotos/cima/vimarlado.jpg", alt: "Serviço de Beleza 1" },
     { src: "/fotos/cima/cima2.jpg", alt: "Serviço de Beleza 2" },
     { src: "/fotos/cima/cima3.jpg", alt: "Serviço de Beleza 3" },
-    { src: "/fotos/cima/cima4.jpg", alt: "Serviço de Beleza 4" }
+    { src: "/fotos/cima/cima4.jpg", alt: "Serviço de Beleza 4" },
+
   ]
   const galleryImagesBottom = [
     { src: "/fotos/baixo/baixo1.jpg", alt: "Galeria Vimar 1" },
@@ -272,7 +273,7 @@ export default function VimarBeleza() {
             <div className="relative">
               <img src="/fotos/gina.jpg" alt="Proprietária" className="w-full h-96 object-cover rounded-2xl shadow-2xl" />
               <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-xl border border-border">
-                <p className="text-2xl font-bold text-accent">15+</p>
+                <p className="text-2xl font-bold text-accent">20+</p>
                 <p className="text-sm text-muted">Anos de Experiência</p>
               </div>
             </div>
