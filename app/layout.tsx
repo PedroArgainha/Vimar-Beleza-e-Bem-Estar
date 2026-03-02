@@ -15,7 +15,13 @@ const gowun = Gowun_Batang({
   display: 'swap',
 })
 
-export const metadata = { title: 'Vimar Beleza e Bem-Estar' }
+export const metadata = {
+  title: 'Vimar Beleza e Bem-Estar',
+  icons: {
+    icon: '/fotos/logo.png',
+    apple: '/fotos/logo.png',
+  },
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
