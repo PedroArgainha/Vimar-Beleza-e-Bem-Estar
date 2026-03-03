@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { MapPin, Clock, Phone, Calendar, Heart, Star, Menu, X } from 'lucide-react'
 import InfiniteGallery from "./InfiniteGallery";
 
@@ -19,8 +19,11 @@ export default function VimarBeleza() {
     { name: "Desfrizagem",
       description: "Elimine o frizz e tenha cabelos lisos e sedosos por mais tempo. Os nossos tratamentos de desfrizagem respeitam a estrutura natural dos fios.",
       images: [
-        "/fotos/frizz/frizz1.jpg",
-            ]},
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=300&fit=crop"
+      ]},
     { name: "Manicure e Pedicure",
       description: "Cuide das suas unhas com nossos serviços completos de manicure e pedicure. Técnicas profissionais para unhas sempre impecáveis.",
       images: [
@@ -63,6 +66,11 @@ export default function VimarBeleza() {
     { src: "/fotos/baixo/baixo3.jpg", alt: "Galeria Vimar 3" },
     { src: "/fotos/baixo/gininha1.jpg", alt: "Galeria Vimar 4" }
   ]
+
+  useEffect(() => {
+    const el = document.getElementById('servico-fotos');
+    if (el) el.scrollLeft = 0;
+  }, [selectedService])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -148,7 +156,7 @@ export default function VimarBeleza() {
                 </span>
               </h1>
               <p className="text-xl text-muted mb-8 leading-relaxed">
-                Cabeleireira em Braga especializada em coloração, madeixas, corte e tratamentos capilares. 
+                No nosso salão, transformamos a sua beleza natural em arte. 
                 Experimente os nossos serviços profissionais num ambiente acolhedor e relaxante.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -251,14 +259,29 @@ export default function VimarBeleza() {
             </div>
               <div id="servico-detalhes" className="lg:sticky lg:top-24 scroll-mt-24">
                 <div className="bg-background rounded-2xl p-8 shadow-xl border border-border">
-                <div className="mb-6">
-                  <div className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4">
+                <div className="mb-6 relative">
+                  <div id="servico-fotos" className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4">
                     {services[selectedService].images.map((image, index) => (
                       <div key={index} className="flex-shrink-0">
                         <img src={image} alt={`${services[selectedService].name} ${index + 1}`} className="w-64 h-48 object-cover rounded-xl shadow-lg" />
                       </div>
                     ))}
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const el = document.getElementById('servico-fotos');
+                      if (!el) return;
+                      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+                      if (!atEnd) el.scrollBy({ left: 272, behavior: 'smooth' });
+                    }}
+                    className="absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-black/40 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
+                    aria-label="Próxima foto"
+                  >
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{services[selectedService].name}</h3>
                 <p className="text-muted leading-relaxed mb-6">{services[selectedService].description}</p>
@@ -400,7 +423,7 @@ export default function VimarBeleza() {
                 <h3 className="text-xl font-bold">Vimar Beleza e Bem-Estar</h3>
               </div>
               <p className="text-white/70 leading-relaxed">
-                Cabeleireira em Braga. O seu destino para beleza e bem-estar, especializada em coloração, madeixas e tratamentos capilares.
+                O seu destino para beleza e bem-estar. Transformamos sonhos em realidade com carinho e profissionalismo.
               </p>
             </div>
 
