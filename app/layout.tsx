@@ -16,7 +16,15 @@ const gowun = Gowun_Batang({
 })
 
 export const metadata = {
-  title: 'Vimar Beleza e Bem-Estar',
+  title: 'Vimar Beleza e Bem-Estar | Cabeleireira em Braga',
+  description: 'Cabeleireira em Braga especializada em coloração, madeixas, corte, desfrizagem e tratamentos capilares. Também manicure, pedicure e penteados. Largo da Senhora Branca, nº100.',
+  keywords: 'cabeleireira braga, salão de beleza braga, coloração braga, madeixas braga, corte de cabelo braga, manicure braga, vimar beleza',
+  openGraph: {
+    title: 'Vimar Beleza e Bem-Estar | Cabeleireira em Braga',
+    description: 'Cabeleireira em Braga especializada em coloração, madeixas e tratamentos capilares. Largo da Senhora Branca, nº100.',
+    locale: 'pt_PT',
+    type: 'website',
+  },
   icons: {
     icon: '/fotos/logo.png',
     apple: '/fotos/logo.png',
@@ -26,7 +34,6 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt">
-      {/* sem styled-jsx aqui */}
       <body className={`${ibm.variable} ${gowun.variable}`}>
         {children}
       </body>
