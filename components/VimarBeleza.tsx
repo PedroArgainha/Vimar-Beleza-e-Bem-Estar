@@ -271,7 +271,9 @@ export default function VimarBeleza() {
                     type="button"
                     onClick={() => {
                       const el = document.getElementById('servico-fotos');
-                      if (el) el.scrollBy({ left: 272, behavior: 'smooth' });
+                      if (!el) return;
+                      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+                      if (!atEnd) el.scrollBy({ left: 272, behavior: 'smooth' });
                     }}
                     className="absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-black/40 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
                     aria-label="Próxima foto"
