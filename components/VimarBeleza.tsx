@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { MapPin, Clock, Phone, Calendar, Heart, Star, Menu, X } from 'lucide-react'
 import InfiniteGallery from "./InfiniteGallery";
 
@@ -66,6 +66,11 @@ export default function VimarBeleza() {
     { src: "/fotos/baixo/baixo3.jpg", alt: "Galeria Vimar 3" },
     { src: "/fotos/baixo/gininha1.jpg", alt: "Galeria Vimar 4" }
   ]
+
+  useEffect(() => {
+    const el = document.getElementById('servico-fotos');
+    if (el) el.scrollLeft = 0;
+  }, [selectedService])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -169,9 +174,12 @@ export default function VimarBeleza() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative" ref={(el) => { (window as any)._heroRef = el; }}>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <div className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4">
+                <div
+                  id="hero-scroll"
+                  className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4"
+                >
                   {heroImages.map((image, index) => (
                     <div key={index} className="flex-shrink-0">
                       <img src={image} alt={`Salão Vimar ${index + 1}`} className="w-80 h-96 object-cover rounded-xl" />
@@ -179,6 +187,20 @@ export default function VimarBeleza() {
                   ))}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+                {/* Seta direita funcional */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    const el = document.getElementById('hero-scroll');
+                    if (el) el.scrollBy({ left: 336, behavior: 'smooth' });
+                  }}
+                  className="absolute top-1/2 right-3 -translate-y-1/2 z-10 bg-black/40 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
+                  aria-label="Próxima foto"
+                >
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-card rounded-2xl p-6 shadow-xl">
                 <div className="flex items-center space-x-2">
@@ -237,14 +259,27 @@ export default function VimarBeleza() {
             </div>
               <div id="servico-detalhes" className="lg:sticky lg:top-24 scroll-mt-24">
                 <div className="bg-background rounded-2xl p-8 shadow-xl border border-border">
-                <div className="mb-6">
-                  <div className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4">
+                <div className="mb-6 relative">
+                  <div id="servico-fotos" className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4">
                     {services[selectedService].images.map((image, index) => (
                       <div key={index} className="flex-shrink-0">
                         <img src={image} alt={`${services[selectedService].name} ${index + 1}`} className="w-64 h-48 object-cover rounded-xl shadow-lg" />
                       </div>
                     ))}
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const el = document.getElementById('servico-fotos');
+                      if (el) el.scrollBy({ left: 272, behavior: 'smooth' });
+                    }}
+                    className="absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-black/40 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
+                    aria-label="Próxima foto"
+                  >
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{services[selectedService].name}</h3>
                 <p className="text-muted leading-relaxed mb-6">{services[selectedService].description}</p>
