@@ -19,7 +19,7 @@ export default function VimarBeleza() {
     { name: "Desfrizagem",
       description: "Elimine o frizz e tenha cabelos lisos e sedosos por mais tempo. Os nossos tratamentos de desfrizagem respeitam a estrutura natural dos fios.",
       images: [
-        "/fotos/friz/friz1.jpg",
+        "/fotos/frizz/frizz1.jpg"
       ]},
     { name: "Manicure e Pedicure",
       description: "Cuide das suas unhas com nossos serviços completos de manicure e pedicure. Técnicas profissionais para unhas sempre impecáveis.",
