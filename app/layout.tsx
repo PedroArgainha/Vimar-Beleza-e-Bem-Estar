@@ -25,10 +25,6 @@ export const metadata = {
     locale: 'pt_PT',
     type: 'website',
   },
-  icons: {
-    icon: '/fotos/logo.png',
-    apple: '/fotos/logo.png',
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
