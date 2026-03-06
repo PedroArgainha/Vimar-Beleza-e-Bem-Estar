@@ -10,7 +10,7 @@ export default function VimarBeleza() {
 
   const services = [
     { name: "Coloração e Madeixas",
-      description: "Transforme o seu visual com asnossas técnicas avançadas de coloração e madeixas. Utilizamos produtos de alta qualidade para garantir cores vibrantes e duradouras.",
+      description: "Transforme o seu visual com as nossas técnicas avançadas de coloração e madeixas. Utilizamos produtos de alta qualidade para garantir cores vibrantes e duradouras.",
       images: [
         "/fotos/madeixas/madeixas1.jpg",
         "/fotos/madeixas/madeixas.jpg",
