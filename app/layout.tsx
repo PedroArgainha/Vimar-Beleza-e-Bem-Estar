@@ -1,5 +1,6 @@
 import './globals.css'
 import { IBM_Plex_Sans, Gowun_Batang } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 const ibm = IBM_Plex_Sans({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt">
       <body className={`${ibm.variable} ${gowun.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
