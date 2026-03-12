@@ -1,16 +1,17 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { MapPin, Clock, Phone, Calendar, Heart, Star, Menu, X } from 'lucide-react'
 import InfiniteGallery from "./InfiniteGallery";
 
 export default function VimarBeleza() {
   const [selectedService, setSelectedService] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [privacyOpen, setPrivacyOpen] = useState(false)
 
   const services = [
     { name: "Coloração e Madeixas",
-      description: "Transforme o seu visual com as nossas técnicas avançadas de coloração e madeixas. Utilizamos produtos de alta qualidade para garantir cores vibrantes e duradouras.",
+      description: "Transforme o seu visual com asnossas técnicas avançadas de coloração e madeixas. Utilizamos produtos de alta qualidade para garantir cores vibrantes e duradouras.",
       images: [
         "/fotos/madeixas/madeixas1.jpg",
         "/fotos/madeixas/madeixas.jpg",
@@ -19,7 +20,10 @@ export default function VimarBeleza() {
     { name: "Desfrizagem",
       description: "Elimine o frizz e tenha cabelos lisos e sedosos por mais tempo. Os nossos tratamentos de desfrizagem respeitam a estrutura natural dos fios.",
       images: [
-        "/fotos/frizz/frizz1.jpg"
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+        "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=300&fit=crop"
       ]},
     { name: "Manicure e Pedicure",
       description: "Cuide das suas unhas com nossos serviços completos de manicure e pedicure. Técnicas profissionais para unhas sempre impecáveis.",
@@ -63,11 +67,6 @@ export default function VimarBeleza() {
     { src: "/fotos/baixo/baixo3.jpg", alt: "Galeria Vimar 3" },
     { src: "/fotos/baixo/gininha1.jpg", alt: "Galeria Vimar 4" }
   ]
-
-  useEffect(() => {
-    const el = document.getElementById('servico-fotos');
-    if (el) el.scrollLeft = 0;
-  }, [selectedService])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -189,9 +188,7 @@ export default function VimarBeleza() {
                   type="button"
                   onClick={() => {
                     const el = document.getElementById('hero-scroll');
-                    if (!el) return;
-                    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
-                    if (!atEnd) el.scrollBy({ left: 336, behavior: 'smooth' });
+                    if (el) el.scrollBy({ left: 336, behavior: 'smooth' });
                   }}
                   className="absolute top-1/2 right-3 -translate-y-1/2 z-10 bg-black/40 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
                   aria-label="Próxima foto"
@@ -258,29 +255,14 @@ export default function VimarBeleza() {
             </div>
               <div id="servico-detalhes" className="lg:sticky lg:top-24 scroll-mt-24">
                 <div className="bg-background rounded-2xl p-8 shadow-xl border border-border">
-                <div className="mb-6 relative">
-                  <div id="servico-fotos" className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4">
+                <div className="mb-6">
+                  <div className="flex overflow-x-auto scrollbar-hide space-x-4 pb-4">
                     {services[selectedService].images.map((image, index) => (
                       <div key={index} className="flex-shrink-0">
                         <img src={image} alt={`${services[selectedService].name} ${index + 1}`} className="w-64 h-48 object-cover rounded-xl shadow-lg" />
                       </div>
                     ))}
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const el = document.getElementById('servico-fotos');
-                      if (!el) return;
-                      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
-                      if (!atEnd) el.scrollBy({ left: 272, behavior: 'smooth' });
-                    }}
-                    className="absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-black/40 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center hover:bg-black/60 transition-colors"
-                    aria-label="Próxima foto"
-                  >
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">{services[selectedService].name}</h3>
                 <p className="text-muted leading-relaxed mb-6">{services[selectedService].description}</p>
@@ -377,7 +359,7 @@ export default function VimarBeleza() {
                 <div className="mt-8 pt-8 border-t border-border">
                   <h4 className="font-semibold text-foreground mb-4">Siga-nos nas Redes Sociais</h4>
                   <div className="flex space-x-4">
-                    <a href="https://www.facebook.com/profile.php?id=100057915025468" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-accent p-3 rounded-full text-white hover:opacity-90 transition-colors">
+                    <a href="https://www.facebook.com/p/Vimar-Beleza-e-Bem-Estar-100063737700742/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-accent p-3 rounded-full text-white hover:opacity-90 transition-colors">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
                       </svg>
@@ -422,7 +404,7 @@ export default function VimarBeleza() {
                 <h3 className="text-xl font-bold">Vimar Beleza e Bem-Estar</h3>
               </div>
               <p className="text-white/70 leading-relaxed">
-                O seu destino para beleza e bem-estar. Transformamos sonhos em realidade com carinho e profissionalismo.
+                Cabeleireira em Braga. O seu destino para beleza e bem-estar, especializada em coloração, madeixas e tratamentos capilares.
               </p>
             </div>
 
@@ -454,7 +436,7 @@ export default function VimarBeleza() {
                 <p>253 261 617 </p>
                 <p>936 315 846</p>
                 <div className="flex space-x-4 mt-4">
-                  <a href="https://www.facebook.com/profile.php?id=100057915025468" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-accent transition-colors">Facebook</a>
+                  <a href="https://www.facebook.com/p/Vimar-Beleza-e-Bem-Estar-100063737700742/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-accent transition-colors">Facebook</a>
                   <a href="https://www.instagram.com/vimar_beleza_e_bem_estar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-accent transition-colors">Instagram</a>
                 </div>
               </div>
@@ -463,7 +445,33 @@ export default function VimarBeleza() {
 
           <div className="border-t border-white/20 mt-8 pt-8 text-center">
             <p className="text-white/70">© 2026 Vimar Beleza e Bem-Estar. Todos os direitos reservados.</p>
+            <button
+              type="button"
+              onClick={() => setPrivacyOpen(true)}
+              className="text-white/40 hover:text-white/70 text-sm mt-2 underline transition-colors"
+            >
+              Política de Privacidade
+            </button>
           </div>
+
+          {/* Modal Política de Privacidade */}
+          {privacyOpen && (
+            <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" onClick={() => setPrivacyOpen(false)}>
+              <div className="bg-white rounded-2xl max-w-lg w-full p-8 max-h-[80vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-xl font-bold text-gray-900">Política de Privacidade</h3>
+                  <button type="button" onClick={() => setPrivacyOpen(false)} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+                </div>
+                <div className="text-gray-600 text-sm space-y-4 leading-relaxed">
+                  <p>O site <strong>Vimar Beleza e Bem-Estar</strong> (vimar-beleza-e-bem-estar.vercel.app) não recolhe, armazena nem partilha quaisquer dados pessoais dos seus visitantes.</p>
+                  <p>Este site não utiliza formulários de contacto, sistemas de análise de tráfego, cookies de terceiros nem qualquer outra tecnologia que permita identificar ou rastrear os utilizadores.</p>
+                  <p>Os únicos dados de acesso registados são os logs técnicos padrão gerados automaticamente pela plataforma de alojamento (Vercel), que incluem endereços IP e páginas visitadas. Estes dados são processados exclusivamente pela Vercel para fins de segurança e disponibilidade do serviço, de acordo com a sua própria política de privacidade.</p>
+                  <p>Para qualquer questão relacionada com privacidade, pode contactar-nos pelo telefone <strong>253 261 617</strong>.</p>
+                  <p className="text-gray-400 text-xs">Última atualização: março de 2026</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </footer>
 
